@@ -1,4 +1,4 @@
-# Metode Newton - Raphson
+# Metode Newton - Raphson.
 def f(x):
     return pow(x,4) - 2 * pow(x,2) + x - 2
 
