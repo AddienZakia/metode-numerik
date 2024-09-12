@@ -3,12 +3,14 @@ def f(x):
     return pow(x,4) - 2 * pow(x,2) + x - 2
 
 def df(x):
-    return 4 * pow(x,3) - 4 * x + 1
+    return 4 * pow(x,3) + 4 * x + 1
 
 i = 1
-ea = 1
-x0 = int(input("x0: "))
-galat_s = float(input("es: "))
+ea = 100
+# x0 = int(input("x0: "))
+x0 = 2
+# galat_s = float(input("es: "))
+galat_s = 0.5
 
 print (f"i: 0 | x: {x0:.7f} | f(x): {f(x0):.7f}, f'(x): {df(x0):.7f} | e: 0")
 

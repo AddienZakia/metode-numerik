@@ -1,22 +1,22 @@
 # Metode Bisection
 def bisec(parameter):
-    return pow(parameter,4) - 2 * pow(parameter, 2) + parameter - 2
+    return pow(parameter,4) + 2 * pow(parameter, 2) - parameter - 3
 
-i = 1
+i = 2
 
 xl = int(input("xl: "))
 xu = int(input("xu: "))
-ia = int(input("iterasi: "))
 
 xr = (xl + xu)/2
 es = 0.5
 ea = 0
 
-while i != ia or abs(ea) >= es:
+print(f"i : 1 - xl: {xl:.7f}, xu: {xu:.7f}, xr: {xr:.7f} | fxl: {bisec(xl):.7f}, fxu: {bisec(xu):.7f}, fxr: {bisec(xr):.7f} | e: {ea:.2f}\n")
+
+while ea == 0 or abs(ea) >= es:
 
     fxl = bisec(xl)
     fxu = bisec(xu)
-    print(f"i : {i} - xl: {xl}, xu: {xu}, xr: {xr} | fxl: {fxl}, fxu: {fxu}, fxr: {bisec(xr)} | e: {ea}\n")
 
     if bisec(xl) * bisec(xr) < 0:
         xu = xr
@@ -29,6 +29,8 @@ while i != ia or abs(ea) >= es:
     ea = galat
 
     xr = new_xr
+
+    print(f"i : {i} - xl: {xl:.7f}, xu: {xu:.7f}, xr: {xr:.7f} | fxl: {fxl:.7f}, fxu: {fxu:.7f}, fxr: {bisec(xr):.7f} | e: {ea:.2f}\n")
 
     i += 1
 
